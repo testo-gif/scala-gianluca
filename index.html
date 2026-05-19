@@ -10,7 +10,7 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--navy:#1a2744;--gold:#c9a84c;--gold-light:#e8c96a;--cream:#faf8f3;--text:#2d3748}
-body{font-family:'Inter',sans-serif;color:var(--text);background:#fff}
+body{font-family:'Inter',sans-serif;color:var(--text);background:#fff;padding-top:40px}
 
 /* HERO */
 .hero{position:relative;height:100vh;min-height:580px;background:var(--navy);display:flex;align-items:center;justify-content:center;overflow:hidden}
@@ -85,9 +85,11 @@ nav.scrolled{background:var(--navy);box-shadow:0 2px 20px rgba(0,0,0,0.3)}
 .contact-value a{color:var(--gold);text-decoration:none}
 
 /* BANNER */
-.banner{background:linear-gradient(135deg,var(--navy),#2c3e6e);padding:80px 24px;text-align:center;color:#fff}
-.banner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.6rem);font-weight:600;margin-bottom:16px}
-.banner p{color:rgba(255,255,255,0.7);margin-bottom:32px;font-size:16px}
+#buy-banner{position:fixed;top:0;left:0;width:100%;background:#000;color:#fff;z-index:9999;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+#buy-banner p{font-size:14px;margin:0}
+#buy-banner a.stripe{background:#ff4d00;color:#fff;text-decoration:none;padding:8px 18px;border-radius:4px;font-size:13px;font-weight:500;white-space:nowrap;flex-shrink:0}
+@media(max-width:600px){#buy-banner .dt{display:none}}
+@media(min-width:601px){#buy-banner .mob{display:none}}
 
 /* FOOTER */
 footer{background:#111827;color:rgba(255,255,255,0.5);padding:32px 24px;text-align:center;font-size:13px}
@@ -123,7 +125,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
 </nav>
 
 <section class="hero">
-  <div class="hero-bg"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=Ab43m-spANMsKzaygz7ZxvgMiQkaOY12RQr9SMMjklR4mEdMrLZjCvjy-AOxMTSACfH6o6yS_EU6WRwZd-A1AC9j6Fm5LWqXnhMxoHU3i-tAt7ya10rxs9PHl9HQJ2e-BoX9mgqk53zaQRmoQqSzOSjVCpbg5iy7kUs-NX4hMwbDFDGQO9xcok7raTxol4gfmxZpFSQ1hX1WLqxGzSOEGh0Ehm9Y9APhX1pGMAiYusaQOgbiFMzFGsFJ--xdVPzPJ6dryrEVNgQ3Re9GC0Oj6ow12Edv0xUmKA8KedyhB_R8T0jTyQ&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="Scala Gianluca" style="width:100%;height:100%;object-fit:cover;opacity:0.35"></div>
+  <div class="hero-bg"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=Ab43m-uOBUdug21PIZcBMZFhPXF4fEz-3VEEiAiPl3BSolC_f--vk90f_Po4FoNhk1WuNu40JU9Uv-ulbZjaDN3JOoaQ0h0ROLosbPd4rbjmXVOW_Q5ly9UA451_1-hV8givB7O4CBJ4GI1Xcx2cSvZPEoP-GGaaxI8mG6opBPUICTm0ZaH96QqHv48ivtaouWmodNvKofPt46yAHPfIyocobe2jtWsbLIlbSed8YPhNGV-0DXmm8P5AtJKgMsJn30tASaSnx1msQ3Hz3k8ei7Z7hFyFm99n5JTVPS7DUf2HJNL55g&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="Scala Gianluca" style="width:100%;height:100%;object-fit:cover;opacity:0.35"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge">Agente immobiliare · Bologna</div>
@@ -150,7 +152,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
         </div>
       </div>
       <div class="about-img">
-        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=700&photoreference=Ab43m-sgS2Pf6zrFofya01k1QGPCRM-JhCgkYpYpCemduumt8rYuyz0jRfByklyT7mHiwbLO7eDIdcVIRP016mhNplZn79xjkzw4RHpw247NlHr66gRHYp1ibjT1KeX2fdl-ZuIae07NetuE1mnM1nXBo-qFzfR8CiH_aan8giAAmOHT3UA0mzp_BpKWvTDaxSUSZA7Dd4Hhqa2efZyfpnBcaTyxgEaMoiNvoQkrp34RcAvU2NR1DlqLxeiCn-rAtaLsHvuokbAn1QcPrBpiqhYVfrhDHjedRlKdSVBruGgNbLBRKg&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="Scala Gianluca">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=700&photoreference=Ab43m-tG7nvZT2gmWpI8jyQI9uyqyfYNmZfEPVtzR9RloQFgoixsFdGIwL_hs_ixK362CifBKv8bBUdvSpNQL_dni8sp0-WFzaqo3l1s7svWodVAoUUBQlSXr2RAA647DiqY7nMpnxGANacpN9vrLDg7J8jsdciBhI6YBw3jkKRvcgYmy2oySbbLz0JeM7MzEG5hu5lQ9LjXrjCXE5G783Yix146P7HrDaMn_aoX8Y5w_-r0D0kY56NG1ABwONCuowVzkCRey-j2fPiQIWzVEuIAItxrttlaYUnmxqsyD4K_tQs1vA&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="Scala Gianluca">
       </div>
     </div>
   </div>
@@ -160,7 +162,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
   <div class="container">
     <h2 class="section-title">Servizi offerti</h2>
     <div class="services-grid"><div class="service-item"><div class="service-icon">⚖</div><span>Consulenza professionale</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Assistenza specializzata</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Supporto clienti</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Pratiche burocratiche</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Documentazione</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Follow-up</span></div></div>
-    <div class="photo-grid"><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-sgS2Pf6zrFofya01k1QGPCRM-JhCgkYpYpCemduumt8rYuyz0jRfByklyT7mHiwbLO7eDIdcVIRP016mhNplZn79xjkzw4RHpw247NlHr66gRHYp1ibjT1KeX2fdl-ZuIae07NetuE1mnM1nXBo-qFzfR8CiH_aan8giAAmOHT3UA0mzp_BpKWvTDaxSUSZA7Dd4Hhqa2efZyfpnBcaTyxgEaMoiNvoQkrp34RcAvU2NR1DlqLxeiCn-rAtaLsHvuokbAn1QcPrBpiqhYVfrhDHjedRlKdSVBruGgNbLBRKg&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-u2GHBU0ZLHGptt-QP9EeGPlRrUS21It7Wfwstr-0gwBxCCBpkPuJ59cZzoV03tbtm8s9wwl8LciOykNHpWC-R7wqYG-fupVtyOj_9gu2CkqN7EYU-yGG_WlOiIePZUTe6LJU8hd-ioHWJIKUC5yoYQJUgfQfLXLKvGG5gjAdUBiFPwg5xKFsovm9SVE-Lel9uwEZH3vpjGZIcJgkWtDFaI-TekTh7fVm6sJDJzz1P_vXcHAtY7CQgzX-uBRk97bCzq9Z79mp5Gu6fPdBgRDBhUnrXrHdb33IWmDaQdnYra-Q&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-vpVTPpoCsBefIEyJRl-mpqsVswlVBIUsK1Wf1POBS4fB1oLkvKRspJSYUA-RQ8k9eOvhPWNjxcZ6wcrNakQuY5PuadKJRYuh7mT5-hHQ7-cyjnoNMjCMiaNNHxxTG8enDm_fHwEakmxS9a1tvEcFeUwNAAEGJGp086OhoJWScJ5GQ4cXmfU8fvgOY7p29K3_wWeXiEhESwJx1hZMNv2ThSGDpNISsZu_MV5LurDaKDf9LaoDe82DzZaP6E9i7pOtlFkDtuJ2qGlTpwqR2MVOxioEUT7Xnz7TpYNG-TG69nsw&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-vXzqBMycvh85JlM5dWk5VFffFm9sslfFOQ9B9GSLHt4xlQL0WzShfyTE-QNk-bN93zWsCWWo90dolmeUaVRzcAnPWAFMnYJzOAxfnxbLStGc54F2nZBu57piE91b46bhty2sTBYChqH_1J68tInqgM7ehGWH4wUIn2tiJPbu2jCxdtDH7CRwWvGUAtZQGXVc5Y03XfuUzjGpQcc40LoTuo_iFMBW7vg_FotN17FBkLcU-wDwCFjphpavDBJoVcV9cTLCVCrZwdQ-qKFtUf_DsFgbRJkmE9QqOyEzMAwv7LVQ&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div></div>
+    <div class="photo-grid"><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-tG7nvZT2gmWpI8jyQI9uyqyfYNmZfEPVtzR9RloQFgoixsFdGIwL_hs_ixK362CifBKv8bBUdvSpNQL_dni8sp0-WFzaqo3l1s7svWodVAoUUBQlSXr2RAA647DiqY7nMpnxGANacpN9vrLDg7J8jsdciBhI6YBw3jkKRvcgYmy2oySbbLz0JeM7MzEG5hu5lQ9LjXrjCXE5G783Yix146P7HrDaMn_aoX8Y5w_-r0D0kY56NG1ABwONCuowVzkCRey-j2fPiQIWzVEuIAItxrttlaYUnmxqsyD4K_tQs1vA&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-uynK6WknrF9HZKcpRmmsNbkF9nEf-u44QBU9N2m-r4MK8kvH3LDefgnS6uuwQQFUMWWonT2R9k3wP9mb_MSPwh5TRoGUuIBtQB_okcqPZfDPE2nY5Z96GhyckM-Zv2hNQnEnzeQCLAV_Tk0tTw46vwqTYAdV9cUPt1HZLGhifDZQ8eXhpJYKyW77u3DaqXsPxWAqzNV_sZE81ELTZrBP8eCnyAdcYJnuKatPX0oGb9l-mCK3CmLnq9p6qGuFd5d64RXzvFUZeHsQpcq7kcee3m2O0d6o-4tyDJJOFcdJtfGg&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-tsYebrURyEyds5Bc29MWS26xfrb_muRZY_Ev5BB692k6M7svS1Y5n2JEqC7IlsWGOxcMM1USLdDj8pLDmPw-chJ8rCrtVrK_I_gaJcdoUPwoGde9gIIpwBLHQYQRe-ujw0lvEUrnA3cwZ6No3gOFQ3urOUBSSmqftzut8OhTuHAE9uq4-REc1MAeRInqOa-S5p77bugQ9jvFasfpqjD67krPhRkFNfsnBMZE28v4VATvq_OTFimSN1UK89-Z7rxRvl8j7vAedAfviJx-7rqjW5QJh3FuH_lztweHJXP6yFbw&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-sA55FLp8iy57Q-jXnCw2Ys6Rpq9FQJZ97tx2oWnEAluAjKGkFkynQPf0dAv3ZidIBx7pGXGXU-Dmokbc4BDg2_zhZa9vJWqUE6DcdsmzA8QMfKt341DLb91rlUhy0mwQm3tTX4GMkA_i2s8V0O9xNxH7HqqXLk9HS96MHLF-Dx09uyzm1tNbrXeVY62GMZz1EddZKnkClBrwE-oZoOMn0ycDrszZgVx0x8u30vHnPJBx47RTnrK3znEjn_2heLXtv9AwQMJdrLHd_Iln29tHCNSgXLr9ZkrIP96iufG7murQ&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div></div>
   </div>
 </section>
 
@@ -279,16 +281,19 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
       <div class="contact-card"><div class="contact-icon">📞</div><div class="contact-label">Telefono</div><div class="contact-value"><a href="tel:+39 340 636 1027">+39 340 636 1027</a></div></div>
       <div class="contact-card"><div class="contact-icon">📍</div><div class="contact-label">Indirizzo</div><div class="contact-value">Via Santo Stefano,  130, 40125 Bologna</div></div>
       <div class="contact-card"><div class="contact-icon">🏛</div><div class="contact-label">Specializzazione</div><div class="contact-value">Agente immobiliare</div></div>
+      <div class="contact-card" style="text-align:left">
+  <div class="contact-icon" style="text-align:center">🕐</div>
+  <div class="contact-label" style="text-align:center;margin-bottom:12px">Orari</div>
+  <table style="font-size:13px;width:100%"><tr><td style="padding:5px 16px 5px 0;">Lunedì</td><td style="color:rgba(255,255,255,0.8);">08:30–19:30</td></tr><tr><td style="padding:5px 16px 5px 0;font-weight:700;color:var(--gold)">Martedì</td><td style="color:#fff;font-weight:700;color:var(--gold)">08:30–19:30</td></tr><tr><td style="padding:5px 16px 5px 0;">Mercoledì</td><td style="color:rgba(255,255,255,0.8);">08:30–19:30</td></tr><tr><td style="padding:5px 16px 5px 0;">Giovedì</td><td style="color:rgba(255,255,255,0.8);">08:30–19:30</td></tr><tr><td style="padding:5px 16px 5px 0;">Venerdì</td><td style="color:rgba(255,255,255,0.8);">08:30–19:30</td></tr><tr><td style="padding:5px 16px 5px 0;">Sabato</td><td style="color:rgba(255,255,255,0.8);">08:30–13</td></tr><tr><td style="padding:5px 16px 5px 0;">Domenica</td><td style="color:#e53e3e;">Chiuso</td></tr></table>
+</div>
     </div>
   </div>
 </section>
 
-<div class="banner">
-  <div class="container">
-    <h2>Vuoi un sito come questo per il tuo studio?</h2>
-    <p>Simplo crea siti web professionali in 24 ore per studi legali, notai e professionisti.</p>
-    <a href="https://buy.stripe.com/8x25kC7mo39M0bN1Mv1B601" class="btn-primary">Scopri Simplo →</a>
-  </div>
+<div id="buy-banner">
+  <p class="dt">Ti piace questo sito? Il tuo potrebbe essere identico — online in 5 giorni per €99</p>
+  <p class="mob">Vuoi un sito così? €99</p>
+  <a href="https://buy.stripe.com/8x25kC7mo39M0bN1Mv1B601" target="_blank" class="stripe">Inizia ora →</a>
 </div>
 
 <footer>
